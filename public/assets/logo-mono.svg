@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 44" fill="none">
+  <g transform="translate(2, 4)">
+    <path d="M0 12 L16 4 L32 12 L16 20 Z" fill="#ffffff" fill-opacity="0.45"></path>
+    <path d="M0 12 L16 20 L16 36 L0 28 Z" fill="#ffffff" fill-opacity="0.7"></path>
+    <path d="M32 12 L16 20 L16 36 L32 28 Z" fill="#ffffff" fill-opacity="0.85"></path>
+    <path d="M16 4 L32 -4 L48 4 L32 12 Z" fill="#ffffff"></path>
+    <path d="M16 4 L32 12 L32 28 L16 20 Z" fill="#ffffff"></path>
+    <path d="M48 4 L32 12 L32 28 L48 20 Z" fill="#ffffff" fill-opacity="0.85"></path>
+  </g>
+  <text x="60" y="29" font-family="Inter, sans-serif" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#ffffff">UniqubeLab</text>
+  <text x="175" y="29" font-family="&#39;JetBrains Mono&#39;, monospace" font-size="11" font-weight="600" letter-spacing="0.12em" fill="#ffffff" fill-opacity="0.7">SI</text>
+</svg>
