@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import ProjectVis from '@/components/ProjectVis';
+import ProjectSwiper from '@/components/ProjectSwiper';
 import { UQ_PROJECTS } from '@/data/projects';
 
 export default function ProjectsPage() {
@@ -34,31 +33,7 @@ export default function ProjectsPage() {
               </button>
             ))}
           </div>
-          <div className="pgrid-light">
-            {visible.map((p, i) => (
-              <Link href={`/projects/${p.id}`} key={p.id} style={{textDecoration:'none', color:'inherit'}}>
-                <article className="pcard-light">
-                  <ProjectVis index={i}/>
-                  <div className="pcard-light-body">
-                    <div className="pcard-meta">
-                      <span className="pcard-sector">{p.sector} · {p.year}</span>
-                      <span className={'pcard-status ' + p.status}>● {p.statusLabel}</span>
-                    </div>
-                    <h3 className="pcard-title">{p.title}</h3>
-                    <p className="pcard-desc">{p.description}</p>
-                    <div className="pcard-metrics">
-                      {p.metrics.map(m => (
-                        <div key={m.label}>
-                          <span className="pcard-metric-val">{m.value}</span>
-                          <span className="pcard-metric-lbl">{m.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              </Link>
-            ))}
-          </div>
+          <ProjectSwiper projects={visible} variant="light" />
         </div>
       </section>
     </>

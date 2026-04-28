@@ -485,6 +485,13 @@ footer.uq-footer { background: var(--slate-900); color: var(--slate-400); paddin
 .btn-sec-dark { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.25); }
 .btn-sec-dark:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
 
+/* ============ Project Swiper ============ */
+.project-swiper-wrap { margin: 0 -16px; padding: 0 16px; }
+.project-swiper-wrap .swiper-pagination-bullet { background: var(--slate-400); opacity: 0.4; width: 6px; height: 6px; }
+.project-swiper-wrap .swiper-pagination-bullet-active { background: var(--blue-600); opacity: 1; }
+.projects-section .project-swiper-wrap .swiper-pagination-bullet { background: var(--slate-500); }
+.projects-section .project-swiper-wrap .swiper-pagination-bullet-active { background: var(--blue-400); }
+
 /* ============ Mobile Menu ============ */
 .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--slate-700); padding: 8px; border-radius: 8px; }
 .mobile-menu-btn:hover { background: var(--slate-50); }

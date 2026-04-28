@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Icon from './Icon';
-import ProjectVis from './ProjectVis';
+import ProjectSwiper from './ProjectSwiper';
 import { UQ_PROJECTS } from '@/data/projects';
 
 export default function Projects() {
@@ -34,29 +34,7 @@ export default function Projects() {
             </button>
           ))}
         </div>
-        <div className="pgrid">
-          {visible.map((p, i) => (
-            <Link href={`/projects/${p.id}`} key={p.id} style={{textDecoration:'none', color:'inherit'}}>
-              <article className="pcard">
-                <ProjectVis index={i}/>
-                <div className="pcard-meta">
-                  <span className="pcard-sector">{p.sector} · {p.year}</span>
-                  <span className={'pcard-status ' + p.status}>● {p.statusLabel}</span>
-                </div>
-                <h3 className="pcard-title">{p.title}</h3>
-                <p className="pcard-desc">{p.description}</p>
-                <div className="pcard-metrics">
-                  {p.metrics.map(m => (
-                    <div key={m.label}>
-                      <span className="pcard-metric-val">{m.value}</span>
-                      <span className="pcard-metric-lbl">{m.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
+        <ProjectSwiper projects={visible} variant="dark" />
         <div style={{textAlign:'center', marginTop:48}}>
           <Link href="/projects" className="btn btn-sec btn-lg" style={{background:'transparent', color:'#fff', borderColor:'var(--slate-700)'}}>전체 프로젝트 보기 <Icon name="arrow-right" size={14}/></Link>
         </div>
